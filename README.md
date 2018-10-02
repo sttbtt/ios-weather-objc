@@ -25,7 +25,7 @@ Please fork and clone this repository. Use the provided Xcode project as it cont
     - A `UIImage` that will be the icon for the forecast (sunny, rainy, etc.)
 3. Create a normal memberwise initializer.
 4. Create an initializer that takes in a dictionary and the city name. (Refer to the example JSON again, and/or ask a PM if you're unclear on why you should pass the city name in separately)
-5. Create a model controller, and in its header file, add property of an array of forecasts. In the .m file, add an internal mutable array of forecasts. The external forecasts should just be a getter method that returns a copy of the internal forecasts.
+5. Create a model controller, and add a property of an array of forecasts.
 6. In the initializer of the model controller, give an initial value of an empty mutable array to the internal forecasts.
 7. Add static constants to the model controller for the base url and your API key.
 8. Create a function that will perform a data task to get the forecasts. This should take in a zip code, and have a completion block with an error. The process should be the same as if you were writing this in Swift up to the point where you would use a `JSONDecoder`. Instead, use `NSJSONSerialization` to turn the data returned from the data task into a dictionary. From there, you will be able to parse it to the point where you can pass a sub-dictionary to your model's initializer.
